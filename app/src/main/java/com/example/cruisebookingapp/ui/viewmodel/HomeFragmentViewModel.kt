@@ -9,5 +9,5 @@ import com.example.cruisebookingapp.data.repository.ShipRepository
 
 class HomeFragmentViewModel : ViewModel() {
 
-    fun shipList(context : Context) : List<Ship> = ShipRepository(context).getShips()
+    fun getShipList(context : Context) : List<Ship> = ShipRepository(context).getShips()
 }
