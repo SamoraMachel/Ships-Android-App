@@ -11,7 +11,6 @@ import com.example.cruisebookingapp.data.repository.ShipRepository
 class HomeFragmentViewModel : ViewModel() {
 
     fun getShipList(context : Context) : LiveData<List<Ship>> {
-        Toast.makeText(context, "API called", Toast.LENGTH_LONG).show()
         return ShipRepository(context).getShips()
     }
 }
