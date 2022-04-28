@@ -9,7 +9,7 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="match_parent"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
@@ -17,14 +17,14 @@
         app:cardCornerRadius="20">
 
         <ImageView
-            android:id="@+id/imageView5"
+            android:id="@+id/btmShipImage"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             tools:src="@tools:sample/backgrounds/scenic" />
     </androidx.cardview.widget.CardView>
 
     <TextView
-        android:id="@+id/textView3"
+        android:id="@+id/btmShipName"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -36,7 +36,7 @@
         android:textSize="20sp" />
 
     <TextView
-        android:id="@+id/textView4"
+        android:id="@+id/btmShipType"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
@@ -47,7 +47,7 @@
         android:textColor="#6B6B6B" />
 
     <TextView
-        android:id="@+id/textView6"
+        android:id="@+id/shipHomePort"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
@@ -68,10 +68,12 @@
         android:textSize="12sp" />
 
     <com.google.android.material.chip.ChipGroup
+        android:id="@+id/btmRoleChipGrp"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginEnd="8dp">
+        android:layout_marginEnd="8dp"
+        android:layout_marginBottom="12dp">
 
     </com.google.android.material.chip.ChipGroup>
 </LinearLayout>
