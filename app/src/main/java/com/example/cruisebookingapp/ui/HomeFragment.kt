@@ -31,8 +31,8 @@ class HomeFragment : Fragment() {
 
         // setup the recycler view
         val shipRecycler : RecyclerView =  mainView.findViewById(R.id.shipRecyclerView)
-        shipRecycler.layoutManager = GridLayoutManager(context, R.integer.home_grid_span)// StaggeredGridLayoutManager(R.integer.home_grid_span, StaggeredGridLayoutManager.VERTICAL)
         shipRecycler.adapter = HomeFragmentAdapter(viewModel.shipList(requireContext()))
+        shipRecycler.layoutManager = StaggeredGridLayoutManager(R.integer.home_grid_span, StaggeredGridLayoutManager.VERTICAL)
 
 
         return mainView
