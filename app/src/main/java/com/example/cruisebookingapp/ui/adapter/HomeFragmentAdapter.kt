@@ -11,22 +11,27 @@ import com.bumptech.glide.Glide
 import com.example.cruisebookingapp.R
 import com.example.cruisebookingapp.data.model.Ship
 
-class HomeFragmentAdapter(val shipList : List<Ship> ) : RecyclerView.Adapter<HomeFragmentAdapter.ViewHolder>() {
+class HomeFragmentAdapter(val shipList : List<Ship> ) : RecyclerView.Adapter<HomeFragmentAdapter.HomeViewHolder>() {
 
-    class ViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
+    class HomeViewHolder(itemView : View) : RecyclerView.ViewHolder(itemView) {
         val shipImage : ImageView = itemView.findViewById(R.id.shipImage)
         val shipName : TextView = itemView.findViewById(R.id.shipName)
         val shipType : TextView = itemView.findViewById(R.id.shipType)
         val context : Context =  itemView.context
     }
 
-    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder {
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HomeViewHolder{
         val layoutInflater =
             LayoutInflater.from(parent.context).inflate(R.layout.ship_card, parent, false)
-        return HomeFragmentAdapter.ViewHolder(layoutInflater)
+        return HomeViewHolder(layoutInflater)
     }
 
-    override fun onBindViewHolder(holder: ViewHolder, position: Int) {
+
+    override fun getItemCount(): Int {
+        return shipList.size
+    }
+
+    override fun onBindViewHolder(holder: HomeViewHolder, position: Int) {
         val ship = shipList.get(position)
 
         Glide.with(holder.context)
@@ -34,12 +39,8 @@ class HomeFragmentAdapter(val shipList : List<Ship> ) : RecyclerView.Adapter<Hom
             .into(holder.shipImage)
         holder.shipName.text = ship.ship_name
         holder.shipType.text = ship.ship_type
-
     }
 
-    override fun getItemCount(): Int {
-        return shipList.size
-    }
 
 
 }

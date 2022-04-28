@@ -6,9 +6,11 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.lifecycle.ViewModelProvider
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.StaggeredGridLayoutManager
 import com.example.cruisebookingapp.R
+import com.example.cruisebookingapp.ui.adapter.HomeFragmentAdapter
 import com.example.cruisebookingapp.ui.viewmodel.HomeFragmentViewModel
 
 
@@ -29,8 +31,9 @@ class HomeFragment : Fragment() {
 
         // setup the recycler view
         val shipRecycler : RecyclerView =  mainView.findViewById(R.id.shipRecyclerView)
-        shipRecycler.layoutManager = StaggeredGridLayoutManager(R.integer.home_grid_span, StaggeredGridLayoutManager.VERTICAL)
-        shipRecycler.adapter =
+        shipRecycler.layoutManager = GridLayoutManager(context, R.integer.home_grid_span)// StaggeredGridLayoutManager(R.integer.home_grid_span, StaggeredGridLayoutManager.VERTICAL)
+        shipRecycler.adapter = HomeFragmentAdapter(viewModel.shipList(requireContext()))
+
 
         return mainView
     }
