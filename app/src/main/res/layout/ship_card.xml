@@ -7,12 +7,13 @@
 
     <androidx.cardview.widget.CardView
         android:layout_width="0dp"
-        android:layout_height="400dp"
+        android:layout_height="wrap_content"
         android:layout_marginStart="8dp"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="4dp"
         android:layout_marginEnd="8dp"
         android:layout_marginBottom="8dp"
-        app:cardCornerRadius="20dp"
+        app:cardBackgroundColor="#00FFFFFF"
+        app:cardCornerRadius="10dp"
         app:cardElevation="0dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
@@ -23,7 +24,7 @@
         <ImageView
             android:id="@+id/shipImage"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="250dp"
             android:scaleType="centerCrop"
             tools:srcCompat="@tools:sample/backgrounds/scenic[3]" />
 
@@ -42,7 +43,7 @@
                 android:text="Sample Ship"
                 android:textAllCaps="true"
                 android:textColor="#DCDCDC"
-                android:textSize="16sp"
+                android:textSize="14sp"
                 app:layout_constraintBottom_toTopOf="@+id/cardView"
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintHorizontal_bias="1.0"
@@ -54,7 +55,7 @@
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="24dp"
                 app:cardBackgroundColor="#80FAFAFA"
-                app:cardCornerRadius="15dp"
+                app:cardCornerRadius="10dp"
                 app:layout_constraintBottom_toBottomOf="parent"
                 app:layout_constraintStart_toStartOf="@+id/shipName">
 
@@ -68,22 +69,21 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_gravity="center"
-                        android:layout_marginStart="12dp"
+                        android:layout_marginStart="8dp"
                         android:layout_marginTop="8dp"
-                        android:layout_marginEnd="8dp"
                         android:layout_marginBottom="8dp"
                         android:layout_weight="1"
                         android:gravity="end"
                         android:text="High Speed"
                         android:textColor="#CCFFFFFF"
-                        android:textSize="18sp" />
+                        android:textSize="11sp" />
 
                     <ImageView
                         android:id="@+id/imageView4"
                         android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"
+                        android:layout_height="14dp"
                         android:layout_gravity="center|start"
-                        android:layout_marginEnd="12dp"
+                        android:layout_marginEnd="8dp"
                         android:layout_weight="1"
                         app:srcCompat="@drawable/ic_round_star_outline_24"
                         app:tint="#CCFFFFFF" />

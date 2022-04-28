@@ -36,7 +36,7 @@ class HomeFragmentAdapter(val shipList : List<Ship> ) : RecyclerView.Adapter<Hom
 
         Glide.with(holder.context)
             .load(ship.image)
-            .override(800, 400)
+            .error(R.drawable.holder)
             .into(holder.shipImage)
         holder.shipName.text = ship.ship_name
         holder.shipType.text = ship.ship_type
