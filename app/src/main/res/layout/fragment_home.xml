@@ -68,8 +68,8 @@
             android:layout_marginEnd="24dp"
             android:layout_marginBottom="16dp"
             android:fontFamily="@font/alata"
-            android:text="A list of ships that have gone to missions"
-            android:textSize="16dp" />
+            android:text="ships that assist SpaceX launches"
+            android:textSize="16sp" />
 
         <androidx.cardview.widget.CardView
             android:layout_width="match_parent"
