@@ -10,6 +10,6 @@ interface ShipService {
     @GET("ships")
     fun listShip() : Call<List<Ship>>
 
-    @GET("ship/{id}")
+    @GET("ships/{id}")
     fun getShip(@Path("id") _id : String) : Call<Ship>
 }
