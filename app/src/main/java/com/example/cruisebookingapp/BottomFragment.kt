@@ -13,6 +13,8 @@ import com.bumptech.glide.Glide
 import com.example.cruisebookingapp.data.model.Ship
 import com.example.cruisebookingapp.ui.viewmodel.BottomFragmentViewModel
 import com.google.android.material.bottomsheet.BottomSheetDialogFragment
+import com.google.android.material.chip.Chip
+import com.google.android.material.chip.ChipGroup
 
 private const val SHIP_ID = "ship_id"
 
@@ -39,6 +41,7 @@ class BottomFragment : BottomSheetDialogFragment() {
         val shipTitle : TextView =  btmView.findViewById(R.id.btmShipName)
         val shipType : TextView = btmView.findViewById(R.id.btmShipType)
         val shipPort : TextView = btmView.findViewById(R.id.shipHomePort)
+        val shipChipGroup : ChipGroup = btmView.findViewById(R.id.btmRoleChipGrp)
 
         val viewModel : BottomFragmentViewModel = ViewModelProvider(this).get(BottomFragmentViewModel::class.java)
 
@@ -52,6 +55,11 @@ class BottomFragment : BottomSheetDialogFragment() {
                 shipTitle.text = it.ship_name
                 shipType.text = it.ship_type
                 shipPort.text = it.home_port
+                for (role in it.roles) {
+                    val chip = Chip(context)
+                    chip.text = role
+                    shipChipGroup.addView(chip)
+                }
             }
         })
 
